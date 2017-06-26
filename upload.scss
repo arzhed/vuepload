@@ -1,0 +1,113 @@
+$marginBottom : 0.3rem;
+$marginRight : 0.3rem;
+
+$primary-color : #2579a9;
+$error-color : #d54c4c;
+
+.upload {
+
+    &.with-cover {
+        .thumb-container:first-child {
+            background-color: black;
+            display: block;
+            .thumb-file {
+                height: 30rem;
+            }
+            span.star {
+                display: none;
+            }
+        }
+    }
+
+    &.thumb {
+        height: 14rem;
+        // margin-bottom: $marginBottom;
+        margin-right: $marginRight;
+    }
+
+    &.thumb-error {
+        color: lightcoral;
+    }
+
+    &.thumb-container {
+        display: inline-block;
+        text-align: center;
+
+        &:hover .thumb-hover {
+            display: flex;
+            background-color: rgba(1,1,1,0.7);
+        }
+
+        .thumb-hover {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // height: calc(100% - #{$marginBottom});
+            height: calc(100%);
+            width: calc(100% - #{$marginRight});
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 50%;
+                border : 1px solid;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+                &.remove {
+                    color : $error-color;
+                    border-color: $error-color;
+                }
+                &.star {
+                    color : $primary-color;
+                    border-color: $primary-color;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    border: 0px;
+                    font-size: 2.2rem;
+                }
+            }
+        }
+
+    }
+
+    &.add {
+        display: inline-block;
+        .thumb-custom {
+            width: 14rem;
+            background-color: lightgray;
+            font-size: 1.5rem;
+
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: lighten($primary-color, 20%);
+            &:hover {
+                font-size: 2.2rem;
+                background-color: darken(lightgray, 10%);
+                color: lighten($primary-color, 10%);
+            }
+        }
+    }
+
+}
+
+output.upload {
+    display: inline-block;
+    width: 100%;
+}
+
+.position-relative {
+    position: relative;
+}
