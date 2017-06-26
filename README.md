@@ -1,7 +1,9 @@
 # vuepload
 Upload component for Vue.js 2.x
 
-**NOTE : this was just a try with one of my projet, but I feel it could become a cool plugin. However, I started the implementation as a Vue component, not plugin, so I am sure yet of how to make the transition. As a consequence, installation remains manual (which sucks, I know). Any tip, recommandation or help is appreciated **
+**NOTE : this was just a try with one of my projet, but I feel it could become a cool plugin. However, I started the implementation as a Vue component, not plugin, so I am not sure yet of how to make the transition. As a consequence, installation remains manual (which sucks, I know). Any tip, recommandation or help is appreciated**
+
+![Vuepload in action](vuepload.png)
 
 ## Installation
 Place Upload.js in your `./components` or whatever feels apropriate. In your `app.js` file, just load the component like so:
@@ -66,7 +68,7 @@ module.exports = {
 ```
 The use of `updateFiles` function is explained in Vue.js doc [here](https://vuejs.org/v2/guide/components.html#sync-Modifier).
 
-### Cover phto
+### Cover photo
 If you want one of the photos to be chosen as "cover photo", just add HTML attribute
 ```
 <vuepload cover="true" upload-id="photos" upload-url="/api/upload"></vuepload>
